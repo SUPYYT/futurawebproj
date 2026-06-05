@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDURO</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+</head>
+<body onload="initSas()">
+        <div class="navPan">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sastanak.html">Sastanak</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <section class="first" style="background-image: url(Slike/Sastanak.png);">
+        <div class="bg">
+        <br>
+        <div class="outline intro center">
+            <h1>Zakažite sastanak</h1>
+        </div>
+        <div class="centerChildren abtext">
+            <p>Na sastanku se možete savjetovati sa našim stručnjacima o određenom proizvodu. Zakažite sastanak unosom vaših podataka ispod.</p>
+        </div>
+
+    </div>
+    </section>
+    <section class="content abtext">
+        <br>
+        <form>
+            <label for="ime">Ime</label>
+            <input type="text" id="ime"> <br>
+            <label for="prezime">Prezime</label>
+            <input type="text" id="prezime"> <br>
+            <label for="adresa">Adresa</label>
+            <input type="text" id="adresa"> <br>
+            <label for="broj">Broj telefona</label>
+            <input type="tel" id="broj"> <br>
+            <label for="mail">Mail</label>
+            <input type="email" id="mail"> <br>
+            <input type="submit" id="submit" onclick="sastanak(event)">
+
+        </form>
+    </section>
+
+
+    <script src="sastanci.js"></script>
+
+</body>
+    
+
+
+<footer>
+    <hr>
+    <br>
+
+<section class="centerChildren">
+    <h1 class="outline intro">Naši Partneri</h1>
+    <div class="partneri">
+        <a href="https://hnk-gorica.hr/">
+            <img src="Slike/Gorica.png" alt="HNK GORICA" width="150px" height="150px">
+        </a>
+
+        <a href="https://www.elgrad.hr/">
+            <img src="Slike/Elgrad.jpg" alt="Elgrad" width="150px" height="150px">
+        </a>
+         
+    </div>
+    <h1 class="outline intro">Naše Poslovnice</h1>
+</section>
+
+<div class="content footer">
+    <div>
+        <h2>Poslovnica Zagreb</h2>
+        <p>Velimira Škorpika 11</p>
+        <p>091/4669-121</p>
+        <div class="map">
+            <div id="map1"></div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Poslovnica Zadar</h2>
+        <p>Ul. 4. Gardijske Brigade 1</p>
+        <p>099/658-7877</p>
+        <div class="map">
+            <div id="map2"></div>
+        </div>
+    </div>
+    <div>
+        <h2>Poslovnica Split</h2>
+        <p>Tolstojeva 9</p>
+        <p>098/559-601</p>
+        <div class="map">
+            <div id="map3"></div>
+        </div>
+    </div>
+    <div>
+        <h2>Poslovnica Rijeka</h2>
+        <p>Trpimirova 6a</p>
+        <p>091/4669-127</p>
+        <div class="map">
+            <div id="map4"></div>
+        </div>
+    </div>
+
+
+ 
+</div>
+<br>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+<script src="map.js"></script>
+</footer>
+</html>
